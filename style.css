@@ -102,6 +102,10 @@ img {
 	padding-bottom: 18px;
 	line-height: 1.4;
 }
+.card__accordian-label:hover {
+	color: var(--very-dark-desaturated-blue);
+	font-weight: 700;
+}
 .js-accord-header.active {
 	color: var(--very-dark-desaturated-blue);
 	font-weight: 700;
@@ -113,12 +117,37 @@ img {
 	transform: rotate(180deg);
 	transition: all 0.3s ease;
 }
-@media screen and (max-width: 350px) {
+@media screen and (max-width: 370px) {
 	.container {
 		padding: 0 10px;
 	}
 	.card {
 		width: 300px;
+	}
+	.card__images::before {
+		left: 30px;
+	}
+}
+@media screen and (max-width: 768px) and (orientation: landscape){
+	.card {
+		width: 420px;
+	}
+	.card__accordian {
+		padding: 0 25px;
+	}
+	.card__images::before {
+		left: 85px;
+	}
+}
+@media screen and (min-width: 768px) {
+	.card {
+		width: 550px;
+	}
+	.card__accordian {
+		padding: 0 50px;
+	}
+	.card__images::before {
+		left: 145px;
 	}
 }
 @media screen and (min-width: 1180px) {
